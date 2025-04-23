@@ -9,12 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import fr.nomat.ai_email_reply.dto.EmailRequestDTO;
 import fr.nomat.ai_email_reply.services.EmailGeneratorService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
 @RequestMapping("/api/email")
-@CrossOrigin()
+@CrossOrigin(origins = "*")
 public class EmailGeneratorController {
 
     private final EmailGeneratorService emailGeneratorService;
